@@ -1,0 +1,4 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["7glY1"]); }
+
+__d("XArcadePostLaunchDialogAsyncController",["XController"],(function(a,b,c,d,e,f){e.exports=b("XController").create("/canvas/async/arcadepostlaunch/",{app_referral_serialized:{type:"String",required:!0},no_video:{type:"Bool",defaultValue:!1},__asyncDialog:{type:"Int"}})}),null);
+__d("GameroomLaunchDialog",["AsyncRequest","Event","XArcadePostLaunchDialogAsyncController"],(function(a,b,c,d,e,f){a={registerListener:function(a,c,d){b("Event").listen(a,"click",function(){var a=b("XArcadePostLaunchDialogAsyncController").getURIBuilder().setString("app_referral_serialized",c).setBool("no_video",d).getURI();a=new(b("AsyncRequest"))().setURI(a);a.send()})},registerDownloadLinkListener:function(a,c){b("Event").listen(a,"click",function(){c.show()})}};e.exports=a}),null);
